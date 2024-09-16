@@ -46,7 +46,7 @@ jobs:
 
       - name: Run database migrations 
         run: | 
-          goose -dir ./migrations sqlite3 "${DATABASE_URL}" up
+          goose -dir ./scripts/migrateup.sh sqlite3 "${DATABASE_URL}" up
       
 
       - name: Deploy to Cloud run
